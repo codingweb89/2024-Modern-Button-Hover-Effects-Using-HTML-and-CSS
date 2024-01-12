@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #222;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    position: relative;
+}
+
+/* .container {
+    position: relative;
+    top: 20px;
+} */
+
+.container ul {
+    display: flex;
+    position: relative;
+    gap: 30px;
+}
+
+.container ul li {
+    position: relative;
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.container ul li::before {
+    content: "";
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0 0 10px var(--clr),
+                0 0 0 20px var(--bg),
+                0 0 0 22px var(--clr);
+    transition: 0.5s;
+}
+
+.container ul li:hover::before {
+    inset: 0;
+}
+
+.container ul li::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    transform: rotate(45deg);
+}
+
+.container ul li:hover {
+    z-index: 1000;
+    transform: scale(0.75)
+}
+
+.container ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--clr);
+    font-size: 2em;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.container ul li a:hover {
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr));
+}
+
+
+/* For Year */
+
+.year {
+    position: absolute;
+    top: 20%;
+}
+
+.year ul {
+    display: flex;
+    position: relative;
+    gap: 30px;
+}
+
+.year ul li {
+    position: relative;
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1000;
+    transform: scale(0.75)
+}
+
+.year ul li::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 0 10px var(--clr),
+                0 0 0 20px var(--bg),
+                0 0 0 22px var(--clr);
+    transition: 0.5s;
+}
+
+/* .year ul li:hover::before {
+    inset: 0;
+} */
+
+.year ul li::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    transform: rotate(45deg);
+}
+
+/* .year ul li:hover {
+    z-index: 1000;
+    transform: scale(0.75)
+} */
+
+.year ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--clr);
+    font-size: 3em;
+    z-index: 10;
+    transition: 0.5s;
+    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr));
+}
+
+/* .year ul li a:hover {
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr));
+} */
